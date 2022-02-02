@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>TEST PROFILE</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <span><i class="fab fa-pagelines"></i>
+                    </span><span class="title">Megan's Web Conservatory</span>
+                </a>
+
+                <!-- Nav -->
+                <nav>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About The Project</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="otherplantprojects.html">Other Plant Projects</a></li>
+                <li><a href="http://careerresume.org/#contact">Other Computing Projects</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <header>
+                    <p><span id="datatest"></span></p>
+                    <script type="text/javascript">
+                        $.ajax({
+                            url: 'https://i89gvd36ae.execute-api.us-east-1.amazonaws.com/items/testname',
+                            beforeSend: function (xhr) {
+                                xhr.setRequestHeader("Authorization", "Bearer 6QXNMEMFHNY4FJ5ELNFMP5KRW52WFXN5")
+                            }, success: function (data) {
+                                alert(JSON.stringify(data));
+                                document.getElementById("datatest").innerHTML  = JSON.stringify(data);
+                            }
+                        })
+                    </script>
+            </div>
+            </header>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

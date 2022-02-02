@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>About the Project</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="inner">
+
+				<!-- Logo -->
+				<a href="index.html" class="logo">
+					<span><i class="fab fa-pagelines"></i></span><span class="title">Meg's Conservatory</span>
+				</a>
+
+				<!-- Nav -->
+				<nav>
+					<ul>
+						<li><a href="#menu">Menu</a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<h2>Menu</h2>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About The Project</a></li>
+				<li><a href="aboutme.html">About Me</a></li>
+				<li><a href="otherplantprojects.html">Other Plant Projects</a></li>
+				<li><a href="http://careerresume.org/projects.html">Other Computing Projects</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<h1>About The Project</h1>
+				<span class="image right"><img src="images/mewithplants.jpg" alt="" /></span>
+				<p> When I am not on the clock you can often find me with plants in hand. Whether it be working with my
+					house plants, growing microgreens, or digging around in my outdoor gardens I surround myself with
+					flora. I have wanted to combine my passion for plants with my love for technology and this project
+					was my first foot in the door.</p>
+				<p>This project serves several purposes. As my house plant collection grows I wanted a way to showcase,
+					catalog, and manage my houseplants. After hours of research into botany in conjunction with my
+					personal experience, I have created a profile for each of my house plants. Every profile contains
+					key care information and information on toxicity, expected growth, and the plant's origins. </p>
+				<p>Beyond an online catalog, this website also acts as a plant identification system. Each of my house
+					plants has an identification tag containing the plant name and a QR code. When friends or family
+					have questions about a house plant or possibly want one themself, they simply scan the tag, and the
+					plant profile is displayed.</p>
+				<p>While the website acts as an online catalog for my plants it also doubles as a plant identification
+					system. Each of my house plants has an identification tag containing a QR code. When friends or
+					family have questions about a house plant, or possibly want one themself, they simply scan the tag
+					and the plant profile is pulled up.</p>
+				<span class="image left"><img src="images/static_site.png" alt="" /></span>
+				<p>The code behind the project is a blend of HTML, CSS, and JavaScript. The technical architecture
+					behind the sites implements a CI/CD pipeline from my GitHub repo to the S3 bucket. The current
+					computer architecture behind the website is rather simple, as showcased in the diagram to the left.
+					Although this website is currently static, behind the scenes it is getting a makeover. I have been
+					adding each plant profile to a DynamoDB instance. I also created a lambda function to query the DB
+					which can be called through an API gateway(to see the raw JSON data provided by the API click<a
+						href="https://i89gvd36ae.execute-api.us-east-1.amazonaws.com/items">here</a>). The last piece I
+					am working on is rewriting the website code to pull from the API on page load. </p>
+				<p>While the cloud architecture, website, and QR are nothing groundbreaking in terms of computing, what
+					I would like to focus on is the application of the technology. Having the option to pull up a plant
+					profile with a click of a button makes accessing information simple and easy. This is what I find as
+					the most important part of the project. Technology is only as powerful as how you choose to use it.
+					Using technology to help others learn is where my passions truly lie! To learn more about my other
+					projects check out my <a href="http://careerresume.org/">online resume</a>.</p>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="inner">
+				<section>
+					<h2>Connect with me!</h2>
+					<ul class="icons">
+						<li><a href="https://github.com/megantaylorthomas" class="icon brands style2 fa-github"><span
+									class="label">GitHub</span></a></li>
+						<li><a href="https://www.linkedin.com/in/megantaylorthomas"
+								class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="http://careerresume.org/" class="icon solid style2 fa-code"><span
+									class="label">Personal Website</span></a></li>
+						<li><a href="https://s3.amazonaws.com/careerresume.org/MeganThomasResume.docx"
+								class="icon solid style2 fa-file"><span class="label">Resume Download</span></a></li>
+					</ul>
+				</section>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
